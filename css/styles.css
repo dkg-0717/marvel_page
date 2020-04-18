@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
+
+body{
+  margin: 0;
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.container{
+  max-width: 1200px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 92px;
+    background: #1F1F1F;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 52px 40px;
+    font-size: 0.75em;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .grayborder {
+    outline: 1px solid #393939;
+  }
+  
+  .container__social {
+    display: grid;
+    grid-template-columns: 2fr 10fr 2fr 0.7fr;
+    grid-template-rows: 52px;
+  }
+  
+  .login {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menu {
+    width: 25px;
+    height: 25px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .menu .bar {
+    width: 100%;
+    height: 2px;
+    margin: 2px 0;
+    background-color: #fff;
+  }
+  
+  .logo {
+    place-self: center;
+  }
+  
+  .credit-card {
+    width: 30px;
+    height: 16px;
+    border-radius: 2px;
+    background: #fff;
+    margin-right: 10px;
+    position: relative;
+  }
+  
+  .credit-card:after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background: #202020;
+    top: 3px;
+  }
+
+  .credit-card--text p{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .mastercard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon--svg.icon--search {
+    fill: none;
+    stroke-width: 2px;
+    stroke-linecap: square;
+  }
+  
+  .icon--svg--black-stroke {
+    stroke: #fff;
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  /* second section */
+  
+  .container__links {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container__links--urls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
+  
+  .container__links--urls li {
+    list-style: none;
+    padding: 0 18px;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .container__links--urls a {
+    height: inherit;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .container__links--urls a:hover {
+    color: #fff;
+    border-bottom: 2px solid #ec1d24;
+  }
+  
+  .container__links--urls a:hover a {
+    color: lightgray;
+  }
+  
+  @media (orientation: portrait) {
+    header {
+      height: 52px;
+      grid-template-rows: 52px;
+    }
+    .second_nav {
+      display: none;
+    }
+    .mastercard {
+      display: none;
+    }
+    .container__social {
+      grid-template-columns: 1fr 3fr 1fr;
+    }
+    .login p {
+      display: none;
+    }
+    .login .menu {
+      display: flex;
+    }
+    .grayborder {
+      outline: none;
+    }
+  }
+  
