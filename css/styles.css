@@ -167,8 +167,10 @@ header {
     height: 60%;
     width: 100%;
     background: #151515 url("../../assets/images/comics.jpg");
+    /* background-position: right; */
+    /* background-size: 700px 500px; */
     background-position: right;
-    background-size: 700px 500px;
+    background-size: contain;
     background-repeat: no-repeat;
   }
   
@@ -215,16 +217,16 @@ header {
   }
   
   .streaming__videos {
-    height: 40%;
+    min-height: 100px;
+    height: auto;
     width: 70%;
     background-color: #fff;
     padding: 10px;
     position: absolute;
-    bottom: 10px;
+    bottom: 160px;
     left: 50%;
     transform: translate(-50%);
     display: flex;
-    align-items: center;
     overflow-x: auto;
   }
   
@@ -338,6 +340,211 @@ header {
     background-color: #c6a972;
     transform: rotate(-45deg) skewX(45deg);
   }
+
+  /* medium card */
+
+  .medium_card {
+    height: 200px;
+    width: 25%;
+    margin: 7px 7px;
+    flex-shrink: 0;
+  }
+  
+  .medium_card-img {
+    width: 100%;
+    height: 80%;
+  }
+  
+  figure {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    /* box-shadow: 0 7px 17px -8px rgba(0, 0, 0, 0.8); */
+  }
+  
+  .medium_card--image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .medium_card--title {
+    color: #999;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  
+  .medium_card--description {
+    color: #151515;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  
+  .medium_card--description:hover {
+    color: #e62429;
+  }
+  
+  .card:last-child {
+    background-color: #fff;
+  }
+
+  /* carousel */
+  
+  .Carousel {
+    width: 100%;
+    height: 633px;
+    background-image: linear-gradient(
+        to right,
+        rgba(32, 32, 32, 0.5) 5%,
+        transparent 99%
+      ),
+      url("../../assets/images/carousel/toys.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: content-boxK;
+    position: relative;
+    font-weight: 700;
+    padding: 10px;
+  }
+  
+  .container__infomovie {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  
+  .container__infomovie--details {
+    color: #fff;
+    width: 50%;
+    height: auto;
+  }
+  
+  .title {
+    font-size: 3em;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .subtitle {
+    font-weight: 400;
+  }
+  
+  .info-button {
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #e62429;
+    color: #fff;
+    padding: 10px 30px;
+  }
+  
+  .controls:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 20px;
+    height: 100%;
+    background-color: #fff;
+  }
+  
+  .controls {
+    max-width: 100%;
+    width: 900px;
+    height: 72px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -30px;
+    left: 33%;
+    transform: translate(-33%);
+  }
+  
+  .controls ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+  }
+  
+  .controls ul li {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .controls a {
+    padding: 20px 10px;
+    color: #151515;
+    text-decoration: none;
+  }
+  
+  .controls ul li:nth-child(1):after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 5px solid #e62429;
+    width: 100%;
+  }
+
+  /* separator */
+  
+  .separator {
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+  }
+
+  /* marvel home */
+
+  .marvel__home{
+    width: inherit;
+    height: inherit;
+    display: flex;
+  }
+
+  /* small card */
+
+  .small_card {
+    width: 15.0672%;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .small_card--img {
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 7px 17px -8px rgba(0,0,0,.8);
+  }
+  
+  .small_card--img img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .small_card-title h4 {
+    margin-bottom: -7px;
+    color: #e62429;
+    text-transform: uppercase;
+  }
+  
+  .small_card-description span {
+    margin: 0;
+  }
+  
+  .small_card-body {
+    padding-left: 10px;
+  }
+  
   
   
   @media (orientation: portrait) {
