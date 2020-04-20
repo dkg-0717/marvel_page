@@ -174,7 +174,7 @@ header {
   .streaming__info {
     height: 60%;
     width: 100%;
-    background: #151515 url("../../assets/images/comics.jpg");
+    background: #151515 url("../assets/images/comics.jpg");
     /* background-position: right; */
     /* background-size: 700px 500px; */
     background-position: right;
@@ -453,7 +453,7 @@ header {
         rgba(32, 32, 32, 0.5) 5%,
         transparent 99%
       ),
-      url("../../assets/images/carousel/toys.jpg");
+      url("../assets/images/carousel/toys.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
