@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
 
+*{
+  box-sizing: border-box;
+}
+
 body{
   margin: 0;
   font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
@@ -11,6 +15,10 @@ body{
   width: 100%;
   height: 100%;
   margin: 0 auto;
+}
+
+.txt-red{
+  color: #ec1d24;
 }
 
 header {
@@ -227,7 +235,6 @@ header {
     left: 50%;
     transform: translate(-50%);
     display: flex;
-    overflow-x: auto;
   }
   
   .slider-container {
@@ -279,6 +286,53 @@ header {
     background-color: #fff;
   }
 
+  /* long card */
+
+  .long_card {
+    width: 100%;
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: 1fr 50%;
+  }
+  
+  .long_card-img {
+    object-fit: cover;
+  }
+  
+  .long_card--img {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .long_card--img img {
+    width: 100%;
+  }
+  
+  .long_card-body {
+    padding: 30px;
+    place-self: center;
+  }
+  
+  .long_card-body {
+    margin: 0;
+  }
+  
+  .long_card-body a {
+    font-weight: 700;
+    color: #151515;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  .long_card-body a:hover {
+    color: #e62429;
+  }
+  
+  .long_card-body span {
+    margin: 0;
+  }
+  
+
   /* promotions */
 
   .promotions {
@@ -315,28 +369,28 @@ header {
   .textContainer--txt {
     text-overflow: ellipsis;
     text-transform: uppercase;
-    color: #fff;
-    font-size: 1em;
+    color: #1F1F1F;
+    font-size: 2em;
   }
   
   .textContainer--txt:before {
     content: "";
-    width: calc(100% - 70%);
+    width: calc(100% - 90%);
     height: 2px;
     position: absolute;
     left: calc(100% - 55%);
-    top: calc(100% - 105%);
+    top: calc(100% - 90%);
     background-color: #c6a972;
     transform: rotate(-45deg) skewX(45deg);
   }
   
   .textContainer--txt:after {
     content: "";
-    width: calc(100% - 70%);
+    width: calc(100% - 90%);
     height: 2px;
     position: absolute;
-    left: calc(100% - 95%);
-    bottom: calc(100% - 105%);
+    left: calc(100% - 85%);
+    bottom: calc(100% - 90%);
     background-color: #c6a972;
     transform: rotate(-45deg) skewX(45deg);
   }
@@ -344,10 +398,10 @@ header {
   /* medium card */
 
   .medium_card {
-    height: 200px;
+    min-height: 200px;
+    height: 100%;
     width: 25%;
     margin: 7px 7px;
-    flex-shrink: 0;
   }
   
   .medium_card-img {
@@ -545,6 +599,205 @@ header {
     padding-left: 10px;
   }
   
+  /* footer */
+
+  footer {
+    width: 100%;
+    background-color: #151515;
+  }
+  
+  .footer__container {
+    padding-top: 80px;
+    padding-bottom: 30px;
+  }
+  
+  .marvel__full-content {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .marvel__info-logo {
+    width: 100px;
+    background-color: red;
+  }
+  
+  .main__card-promotion {
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+  
+  .main__card-promotion--description {
+    padding-left: 30px;
+  }
+  
+  .main__card-promotion--description h4 {
+    margin: 0;
+    color: #fff;
+  }
+  
+  .main__card-promotion--description p {
+    margin: 0;
+    color: #999;
+  }
+  
+  .main__card-promotion--img {
+    width: 60px;
+  }
+  
+  .img__wrapper {
+    width: 100%;
+  }
+  
+  .img__wrapper img {
+    width: 100%;
+  }
+  
+  .marvel__info nav ul li {
+    color: #fff;
+    list-style: none;
+    line-height: 2em;
+  }
+  
+  .marvel__info {
+    display: flex;
+  }
+  
+  .marvel__info-logo {
+    margin-right: 60px;
+  }
+  
+  .info-logo--link {
+    font-size: 13px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+  }
+  
+  .marvel__info nav {
+    margin-right: 60px;
+  }
+  
+  .marvel__info nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .marvel__social {
+  }
+  
+  .marvel__social h4 {
+    color: #fff;
+    margin: 0;
+  }
+  
+  .social-links ul li {
+    list-style: none;
+  }
+  
+  .marvel__legal-wrapper {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .marvel__legal-wrapper nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .marvel__legal-wrapper nav a,
+  span {
+    text-decoration: none;
+    color: #999;
+    margin: 10px;
+    font-size: 12px;
+    line-height: 1.2em;
+  }
+
+  /* promotion card */
+
+  .promotion_card {
+    height: 345px;
+    width: 100%;
+    background-color: #000;
+  }
+  
+  .promotion_card-container {
+    display: flex;
+  }
+  
+  .promotion_card-img {
+    width: 50%;
+    height: 100%;
+  }
+  
+  .promotion_card-info {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .promotion-title {
+    letter-spacing: 3px;
+    color: #e62429;
+    text-transform: uppercase;
+  }
+  
+  .promotion-description {
+    font-weight: 800;
+    color: #fff;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  
+  .promotion-button {
+    padding: 10px 15px;
+  }
+  
+  .promotion-conditions {
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    font-size: 0.7em;
+  }
+
+  /* marvel podcast */
+
+  .marvel_podcast-container{
+    display: flex;
+  }
+  
+  /* the latest */
+
+  .latest__container {
+    display: flex;
+  }
+  
+  .latest_s1 {
+    height: 100%;
+    width: 70%;
+    padding: 0 0 30px;
+  }
+  
+  .latest_s2 {
+    height: 100%;
+    width: 30%;
+  }
+  
+  .latest_s2-container {
+    box-sizing: border-box;
+    padding: 24px 0;
+  
+    width: 100%;
+    height: 100px;
+  }
   
   
   @media (orientation: portrait) {
