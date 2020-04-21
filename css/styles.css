@@ -448,12 +448,12 @@ header {
   .Carousel {
     width: 100%;
     height: 633px;
-    background-image: linear-gradient(
+    background-image: url("../assets/images/superheroes.jpg");
+    /* inear-gradient(
         to right,
         rgba(32, 32, 32, 0.5) 5%,
         transparent 99%
-      ),
-      url("../assets/images/carousel/toys.jpg");
+      ), */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
