@@ -673,6 +673,10 @@ header {
     width: 100px;
     background-color: red;
   }
+
+  .marvel__info-nav{
+    display: flex;
+  }
   
   .main__card-promotion {
     display: flex;
@@ -828,6 +832,10 @@ header {
   }
   
   /* the latest */
+  .main__card--img{
+    width: 100%;
+    height: 100%;
+  }
 
   .latest__container {
     display: flex;
@@ -861,7 +869,78 @@ header {
     font-size: .875rem;
   }
 
-  @media screen and (max-width:320px){
+
+  @media screen and (max-width:768px){
+    header {
+      height: 52px;
+      grid-template-rows: 52px;
+    }
+    .second_nav {
+      display: none;
+    }
+    .mastercard {
+      display: none;
+    }
+    .container__social {
+      grid-template-columns: 1fr 3fr 1fr;
+    }
+    .login p {
+      display: none;
+    }
+    .login .menu {
+      display: flex;
+    }
+    .grayborder {
+      outline: none;
+    }
+
+    .small_card{
+      width: 50%;
+      flex-shrink: 0;
+    }
+
+    .medium_card{
+      width: 50%;
+      flex-shrink: 0;
+    }
+
+    .streaming__videos{
+      width: 100%;
+      overflow: auto;
+    }
+
+    .marvel__home{
+      overflow: auto;
+    }
+
+    .marvel_podcast-container{
+      overflow: auto;
+    }
+
+    .latest{
+      padding: 10px;
+    }
+
+    .latest__container{
+      flex-direction: column;
+    }
+
+    .latest_s1{
+      width: 100%;
+    }
+
+    .latest_s2{
+      width: 100%;
+    }
+
+    .latest_s2-container{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media screen and (max-width:480px){
+    
     .promotions--desktop {
       display: none;
     }
@@ -871,6 +950,9 @@ header {
     .controls{
       display: none;
     }
+    .home{
+      padding: 10px;
+    }
     .marvel__home{
       flex-direction: column;
     }
@@ -879,9 +961,22 @@ header {
     }
     .medium_card{
       width: 100%;
+      margin: 0;
+      margin-bottom: 50px;
+    }
+    .long_card{
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2,1fr);
+    }
+    .long_card-body{
+      padding: 0;
     }
     .promotion_card{
       height: 100%;
+    }
+    .promotion_card--img{
+      width: 100%;
+      height: q00%;
     }
     .promotion_card-container{
       flex-direction: column;
@@ -894,8 +989,8 @@ header {
     }
     .promotion-button{
       margin-bottom: 100px;
-    color: white;
-    background-color: red;
+      color: white;
+      background-color: red;
     }
     .marvel__full-content{
       flex-direction: column;
@@ -903,12 +998,14 @@ header {
       padding-right: 30px;
     }
     .marvel__info{
-      margin-bottom: 10px;
+      margin-bottom: 25px;
       flex-direction: column;
+      align-items: center;
     }
     .marvel__info-logo{
       height: 100px;
       margin-right: 0;
+      margin-bottom: 20px;
     }
     .marvel__info-nav{
       display: flex;
@@ -916,21 +1013,22 @@ header {
     .marvel__info-nav nav{
       width: 50%;
       margin-right: 0;
+      text-align: center;
     }
     .marvel__card{
-      margin-bottom: 10px;
+      margin-bottom: 25px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-    /* .main__card-promotion{
-      width: 80%;
-    } */
     .marvel__social{
       margin-bottom: 10px;
     }
     .streaming{
       height: 100%;
+    }
+    .podcast{
+      padding: 10px;
     }
     .streaming__videos{
       flex-direction: column;
@@ -942,11 +1040,27 @@ header {
     .marvel_podcast-container{
       flex-direction: column;
     }
+    .latest{
+      padding: 10px;
+    }
     .latest__container{
       flex-direction: column;
     }
+    .latest_s1{
+      width: 100%;
+    }
+    .latest_s2{
+      width: 100%;
+    }
     .latest_s2-container{
       height: 100%;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width:320px){
+    .medium_card{
+      width: 100%;
     }
   }
   
@@ -970,27 +1084,6 @@ header {
   
   
   @media (orientation: portrait) {
-    header {
-      height: 52px;
-      grid-template-rows: 52px;
-    }
-    .second_nav {
-      display: none;
-    }
-    .mastercard {
-      display: none;
-    }
-    .container__social {
-      grid-template-columns: 1fr 3fr 1fr;
-    }
-    .login p {
-      display: none;
-    }
-    .login .menu {
-      display: flex;
-    }
-    .grayborder {
-      outline: none;
-    }
+   
   }
   
