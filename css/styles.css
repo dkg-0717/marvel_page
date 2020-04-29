@@ -886,8 +886,48 @@ header {
     .promotion_card-container{
       flex-direction: column;
     }
+    .promotion_card-img{
+      width: 100%;
+    }
+    .promotion_card-info{
+      width: 100%;
+    }
+    .promotion-button{
+      margin-bottom: 100px;
+    color: white;
+    background-color: red;
+    }
     .marvel__full-content{
       flex-direction: column;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    .marvel__info{
+      margin-bottom: 10px;
+      flex-direction: column;
+    }
+    .marvel__info-logo{
+      height: 100px;
+      margin-right: 0;
+    }
+    .marvel__info-nav{
+      display: flex;
+    }
+    .marvel__info-nav nav{
+      width: 50%;
+      margin-right: 0;
+    }
+    .marvel__card{
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    /* .main__card-promotion{
+      width: 80%;
+    } */
+    .marvel__social{
+      margin-bottom: 10px;
     }
     .streaming{
       height: 100%;
