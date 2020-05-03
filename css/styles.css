@@ -616,7 +616,9 @@ header {
   .marvel__home{
     width: inherit;
     height: inherit;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    column-gap: 10px;
   }
 
   /* small card */
