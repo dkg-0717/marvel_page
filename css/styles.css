@@ -110,6 +110,11 @@ header {
     justify-content: center;
     align-items: center;
   }
+
+  .credit-card-title{
+    letter-spacing: 1px;
+    line-height: 0.95;
+  }
   
   .icon--svg.icon--search {
     fill: none;
@@ -498,111 +503,98 @@ header {
   }
 
   /* carousel */
-  
-  .Carousel {
-    width: 100%;
-    height: 633px;
-    background-image: url("../assets/images/superheroes.jpg");
-    /* inear-gradient(
-        to right,
-        rgba(32, 32, 32, 0.5) 5%,
-        transparent 99%
-      ), */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-origin: content-boxK;
-    position: relative;
-    font-weight: 700;
-    padding: 10px;
-  }
-  
-  .container__infomovie {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-  }
-  
-  .container__infomovie--details {
-    color: #fff;
-    width: 50%;
-    height: auto;
-  }
-  
-  .title {
-    font-size: 3em;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .subtitle {
-    font-weight: 400;
-  }
-  
-  .info-button {
-    font-weight: 700;
-    text-transform: uppercase;
-    background-color: #e62429;
-    color: #fff;
-    padding: 10px 30px;
-  }
-  
-  .controls:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -20px;
-    width: 20px;
-    height: 100%;
-    background-color: #fff;
-  }
-  
-  .controls {
-    max-width: 100%;
-    width: 900px;
-    height: 72px;
-    background-color: #fff;
-    position: absolute;
-    bottom: -30px;
-    left: 33%;
-    transform: translate(-33%);
-  }
-  
-  .controls ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
-  }
-  
-  .controls ul li {
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .controls a {
-    padding: 20px 10px;
-    color: #151515;
-    text-decoration: none;
-  }
-  
-  .controls ul li:nth-child(1):after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-top: 5px solid #e62429;
-    width: 100%;
-  }
 
+  .carousel {
+    /*   max-width: 1000px; */
+      width: 100%;
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    
+    .container-items {
+      position: relative;
+      height: 500px;
+    }
+
+    .overlay{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      /* opacity: 0.5; */
+      background: linear-gradient(to right,rgba(0,0,0,0.7) 10%,rgba(0,0,0,0) 90%);
+      z-index: 1;
+    }
+    
+    .item {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .controls {
+      width: 100%;
+      min-height: 80px;
+      height: auto;
+      position: absolute;
+      bottom: 70px;
+      left: 0;
+      z-index: 2;
+    }
+    
+    .controls-item {
+      background: #fff;
+      margin: 0;
+      max-width: 1000px;
+      width: 100%;
+      padding: 0 10px;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
+      column-gap: 7px;
+      list-style: none;
+      position: relative;
+      left: 33%;
+      transform: translate(-33%);
+    }
+    
+    .btn {
+      width: 100%;
+      height: 100%;
+      padding: 20px 30px 20px 0px;
+      cursor: pointer;
+      position: relative;
+      font-weight: 700;
+    }
+    
+    .btn::after{
+      content: "";
+      width: 0;
+      height: 7px;
+      background: #e62429;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: black;
+    }
+    
+    .btn.active::after{
+      width: 100%;
+      transition: 3s linear;
+      color: #e62429;
+    }
+    
+    .item h1 {
+      font-size: 10em;
+    }
+    
   /* separator */
   
   .separator {
@@ -625,7 +617,6 @@ header {
 
   .small_card {
     width: 100%;
-    margin-right: 20px;
     display: flex;
     flex-direction: column;
   }
@@ -633,12 +624,11 @@ header {
   .small_card--img {
     padding: 0;
     margin: 0;
-    box-shadow: 0 7px 17px -8px rgba(0,0,0,.8);
   }
   
   .small_card--img img {
     width: 100%;
-    height: 100%;
+    height: 84px;
   }
   
   .small_card-title h4 {
